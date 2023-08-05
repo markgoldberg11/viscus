@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viscus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+  <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1137048054441201805/1137056959665815582/VISCUS_BIGGER.png">
+</head>
+
+<body class="bg-dark" data-bs-theme="dark">
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn.discordapp.com/attachments/1137048054441201805/1137056959665815582/VISCUS_BIGGER.png"
+          alt="Logo" width="60" height="38" class="d-inline-block align-text-top">
+      </a>
+    </div>
+  </nav>
+
+  <div class="container" style="margin-top: 15px;">
+    <div class="accordion" id="accordionExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            <strong>About Viscus</strong>
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Viscus is a machine learning model that utilizes input data such as age, lifestyle, and medical history to provide a generalized predicted stroke risk probability for each user, encouraging them to take proactive measures in facilitating their health and well-being.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            <strong>Medical Disclaimer</strong>
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Viscus, our stroke probability generator, is based on a machine learning model and is solely intended for informational and educational usage. Although the predictions generated are based on patterns and correlations present in sample data, any results provided should not replace advice from qualified healthcare professionals. If the user experiences or encounters symptoms or health concerns, immediate medical attention should be sought. Users assume full responsibilities for any actions they may take as a result of our model's outputs.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin-top: 30px;">
+
+
+    <form class="card" style="margin-top: 10px; padding: 10px 10px;">
+
+      <div class="text-center">
+        <h4>Submit Request</h4>
+      </div>
+
+
+
+      <div class="mb-3">
+        <label for="input_age" class="form-label">Age</label>
+        <input type="number" class="form-control" id="input_age" aria-describedby="Age" placeholder="e.g. 28">
+      </div>
+
+      <label for="input_sex" class="form-label">Sex</label>
+      <select class="mb-3 form-select" id="input_sex">
+        <option disabled selected>Choose one</option>
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select>
+
+      <label for="input_hypertension" class="form-label">Do you have Hypertension?</label>
+      <select class="mb-3 form-select" id="input_hypertension">
+        <option disabled selected>Choose one</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+
+      <label for="input_heartdisease" class="form-label">Do you have Heart Disease?</label>
+      <select class="mb-3 form-select" id="input_heartdisease">
+        <option disabled selected>Choose one</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+
+      <label for="input_married" class="form-label">Have you even been married?</label>
+      <select class="mb-3 form-select" id="input_married">
+        <option disabled selected>Choose one</option>
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+
+      <label for="input_work" class="form-label">What is your type of work?</label>
+      <select class="mb-3 form-select" id="input_work">
+        <option disabled selected>Choose one</option>
+        <option value="0">Never</option>
+        <option value="1">Child</option>
+        <option value="2">Governemnt Job</option>
+        <option value="3">Self Employed</option>
+        <option value="4">Private Employment</option>
+      </select>
+
+      <label for="input_residence" class="form-label">What type of residence do you have?</label>
+      <select class="mb-3 form-select" id="input_residence">
+        <option disabled selected>Choose one</option>
+        <option value="0">Rural</option>
+        <option value="1">Urban</option>
+      </select>
+
+      <div class="mb-3">
+        <label for="input_glucose" class="form-label">Average Glucose Level (mg/dl)</label> <a style="text-decoration: none;" data-bs-toggle="collapse" href="#glucose_img" role="button" aria-expanded="false" aria-controls="glucose_img">See More</a>
+        <input type="number" class="form-control" id="input_glucose" aria-describedby="Age" placeholder="e.g. 95">
+
+        <div class="collapse" id="glucose_img">
+          <div class="card card-body">
+            <img src="https://149777215.v2.pressablecdn.com/wp-content/uploads/2021/03/Blood-Sugar-Chart.jpeg">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mb-3">
+        <label for="input_bmi" class="form-label">What is your body mass index? <a style="text-decoration: none;"
+            href="https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" target="_blank">Calculate</a></label>
+        <input type="number" class="form-control" id="input_bmi" aria-describedby="Age" placeholder="e.g. 26">
+      </div>
+
+      <label for="input_smoked" class="form-label">Have you ever smoked?</label>
+      <select class="mb-3 form-select" id="input_smoked">
+        <option disabled selected>Choose one</option>
+        <option value="0">No/Never</option>
+        <option value="1">Yes/Previously</option>
+      </select><br>
+
+      <button type="button" class="btn btn-primary" onclick="viscus_submit()" data-bs-toggle="modal"
+        data-bs-target="#resultsModal">Submit</button>
+      <div class="form-text">Your request may take up to 5 minutes to process. You will not be able to edit the
+        information above once you have submitted, so make sure everything is correct!</div>
+
+    </form><br>
+
+    <div>
+      <img src="https://cdn.discordapp.com/attachments/1137048054441201805/1137056959665815582/VISCUS_BIGGER.png"
+        alt="Logo" width="60" height="38" class="d-inline-block align-text-top"><br>
+      <label style="font-weight: bold;">Viscus Stroke Predictive Machine Learning Model</label>
+      <p>By Mark Goldberg, Joel Lim, Albert Ding & Bryan Ding</p>
+    </div>
+
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="resultsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel"> <img
+              src="https://cdn.discordapp.com/attachments/1137048054441201805/1137056959665815582/VISCUS_BIGGER.png"
+              alt="Logo" width="60" height="38" class="d-inline-block align-text-top"></h1>
+        </div>
+        <div class="modal-body">
+          <div id="loading_info">
+            <label id="info">We are currently loading your results! This request may take some time, so please be
+              patient.</label>
+            <p style="font-weight: bold; margin-top: 10px;">Please do NOT close this window or refresh this page.</p>
+            <center>
+              <img
+                src="https://cdn.discordapp.com/attachments/1137048054441201805/1137106937008377976/viscuc_lilfaster.gif">
+            </center>
+          </div>
+          <div id="results_info" style="display: none;">
+          <label id="results_label">With the inputted data, your stroke probability is <span
+              style="font-weight:bold;" id="results"></span></label><br><br>
+
+            Learn more about how to prevent strokes here:<br>
+            <a href="https://www.cdc.gov/stroke/" style="text-decoration: none;">CDC</a><br>
+
+            <div class="form-text" style="margin-top: 10px;">Predicted results from Viscus are NOT medical advice, and the Viscus model is experimental. Do not make medical decisions based on the results provided here.</div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="location.href='/'">Cancel
+            Request</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    async function viscus_submit() {
+      let age = document.getElementById('input_age').value;
+      let sex = document.getElementById('input_sex').value;
+      let hypertension = document.getElementById('input_hypertension').value;
+      let heartdisease = document.getElementById('input_heartdisease').value;
+      let married = document.getElementById('input_married').value;
+      let work = document.getElementById('input_work').value;
+      let residence = document.getElementById('input_residence').value;
+      let glucose = document.getElementById('input_glucose').value;
+      let bmi = document.getElementById('input_bmi').value;
+      let smoked = document.getElementById('input_smoked').value;
+
+      if (!age || !sex || !hypertension || !heartdisease || !married || !work || !glucose || !bmi || !smoked) {
+        document.getElementById('loading_info').style.display = "none";
+        document.getElementById('results_label').innerHTML = 'Error: Please fill out all fields before submitting.';
+        document.getElementById('results_info').style.display = "block";
+
+        return
+      }
+
+      let inputData = [sex, age, hypertension, heartdisease, married, work, residence, glucose, bmi, smoked]
+
+      fetch("/predict", {
+        method: "POST",
+        body: JSON.stringify({"input_data": inputData}),
+        headers: {"Content-Type": "application/json"}
+      })
+        .then(response => response.json())
+        .then(data => {
+          let prediction = data['predictions'];
+
+          if (!prediction) {
+            document.getElementById('loading_info').style.display = "none";
+            document.getElementById('results_label').innerHTML = 'Error: We appolgoize, but your request has failed. Try reloading this page and submitting again.';
+            document.getElementById('results_info').style.display = "block";
+          } else {
+            prediction = prediction[0];
+          }
+
+          if (prediction < -1) {
+            prediction = 0;
+          } else {
+            prediction = Math.abs(prediction);
+          }
+
+          if (prediction > 1) {
+            prediction = 0.99;
+          }
+
+
+          let rounded_prediction = Math.round(prediction * 10000) / 10000;
+          
+          prediction = (rounded_prediction * 100).toFixed(2) + '%';
+
+          setTimeout(function () {
+            document.getElementById('loading_info').style.display = "none";
+            document.getElementById('results').innerHTML = prediction;
+            document.getElementById('results_info').style.display = "block";
+          }, 10000);
+
+
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    }
+
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
